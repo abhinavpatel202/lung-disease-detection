@@ -63,33 +63,4 @@ python manage.py runserver
 
 ---
 
-## 📸 Screenshots & Demo (Optional)
-
-> _Add screenshots, architecture diagrams, or demo videos here._  
-> _Examples: `model_accuracy.png`, `architecture.png`, `sample_output.png`_
-
----
-
-## 📦 Model File (Trained Weights)
-
-Due to GitHub's 100MB limit, the trained model `NN.h5` is not included in this repo.  
-📁 **[Download from Google Drive](https://your-drive-link.com)** ← _Replace with your link_
-
-- Model was trained on **NIH Chest X-ray Dataset** with GAN-augmented samples
-- Achieves classification accuracy ~99% with robust generalization
-
----
-
-## 👨‍🔬 Authors
-
-- **Abhinav Patel** – [@abhinavpatel202](https://github.com/abhinavpatel202)  
-- **Hardik Patel**  
-- **Janmey Patel**
-
-> Guided by **Prof. Richa Sharma**  
-> Department of Information Technology  
-> Dwarkadas J. Sanghvi College of Engineering  
-> University of Mumbai
-
----
 
