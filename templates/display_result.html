@@ -1,0 +1,90 @@
+
+{% extends "base.html" %}
+
+{% block title %}
+	Classification of Pneumonia
+{% endblock title %}
+
+{% block content %}
+
+<head>
+	<style>
+	.center {
+	  line-height: 200px;
+	  height: 60px;
+	  border: 3px solid rgb(118, 170, 15);
+	  text-align: center;
+	}
+	
+	.center p {
+	  line-height: 1.5;
+	  display: inline-block;
+	  vertical-align: middle;
+	}
+	</style>
+
+<style>
+	#customers {
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+	}
+	
+
+	#customers td, #customers th {
+	border: 3px solid #16041f;
+	padding: 8px;
+	text-align: center;
+	}
+	
+	#customers tr:nth-child(even){background-color: #deca91;text-align: center}
+	#customers tr:nth-child(odd){background-color: #ddc366;text-align: center}
+	#customers tr:hover {background-color: #f1f1f1;text-align: center;text;color: rgba(0, 0, 170, 0.858)}
+	
+	#customers th {
+	padding-top: 12px;
+	padding-bottom: 12px;
+	text-align: center;
+	background-color: #1f106b;
+	color: rgba(250, 250, 250, 0.858);
+	}
+	</style>
+
+
+	</head>
+	
+<h1 class="heading" style="text-align: center;"> Result of classification of uploaded image using Neural Network </h1><hr class="hr">
+
+<div class="center">
+
+	<h1 style="color :#2c0a47;"><b><u> Result </u>  : <i> {{ result }} </i></b></h1>
+	<br>
+</div>			
+
+<br><br>
+
+
+<table id="customers">          
+	<tr>
+			<th>Original image</th>
+			<th>Preprocessed image</th>
+	</tr>  
+	<tr>
+		<td><img src="{{ image.url }}" class="img-responsive" style="width: 95%;" /></td>
+		<td><img src="/static/images/p1.png" class="img-responsive" style="width: 95%; " /></td>
+	</tr>  
+
+</table>
+
+				<br>
+				<br>
+				<br>
+
+
+				<form method="POST">
+					{% csrf_token %}
+					<button type="submit" class="btn btn-success"> Audio result out </button>
+				</form>
+	
+
+{% endblock content %}

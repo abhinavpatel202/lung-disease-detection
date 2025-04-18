@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Classification of Pneumonia
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+
+	<link rel="stylesheet" type="text/css" href="{% static 'home_page_css .css' %}">
+
+</head>
+
+
+
+<div class="text-center">
+			{% if not user.is_authenticated %}
+				<h1> <b> Detection and Classification of Pneumonia using Neural Network  </b> </h1>
+			{% else %}
+				<h1> <b> Welcome to Detection and Classification of Pneumonia using Neural Network system, {{ user }} . ! </b> </h1>
+			{% endif %}
+
+	</div>
+
+		<br>
+		
+		<div class="w3-content w3-section" style="max-width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/c1.jpg' %}" style="height:400px;width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/c2.jpg' %}" style="height:400px;width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/c3.jpg' %}" style="height:400px;width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/c4.jpg' %}" style="height:400px;width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/c5.jpg' %}" style="height:400px;width:100%">
+			<img class="mySlides w3-animate-right" src="{% static 'img/c6.jpg' %}" style="height:400px;width:100%">  
+			<img class="mySlides w3-animate-right" src="{% static 'img/c7.jpg' %}" style="height:400px;width:100%">  
+		  </div>
+		  
+
+				<div class="row justify-content-center ">
+					<div class="text-center">
+		
+					 <br>
+				<p style="text-align:justify;" >	
+					<b>
+
+The risk of pneumonia is immense for many, especially in developing nations where billions face energy poverty and rely on polluting forms of energy. The WHO estimates that over 4 million premature deaths occur annually from household air pollution-related diseases including pneumonia. Over 150 million people get infected with pneumonia on an annual basis especially children under 5 years old. In such regions, the problem can be further aggravated due to the dearth of medical resources and personnel. For example, in Africa’s 57 nations, a gap of 2.3 million doctors and nurses exists. For these populations, accurate and fast diagnosis means everything. It can guarantee timely access to treatment and save much needed time and money for those already experiencing poverty.
+
+					</b>			
+			</div>
+		</div>
+	
+			
+
+		<script>
+			var myIndex = 0;
+			carousel();
+			
+			function carousel() {
+			  var i;
+			  var x = document.getElementsByClassName("mySlides");
+			  for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			  }
+			  myIndex++;
+			  if (myIndex > x.length) {myIndex = 1}    
+			  x[myIndex-1].style.display = "block";  
+			  setTimeout(carousel, 2500);    
+			}
+		</script>
+					
+			
+{% endblock content %}

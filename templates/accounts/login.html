@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Login Portal
+{% endblock title %}
+
+
+{% block content %}
+
+		<div class="row">
+			<div class="col-md-4">
+				<form method="POST">
+					{% csrf_token %}
+					{{ form.as_p }}
+
+					<input type="submit" value='Login' class="btn btn-outline-primary">
+				</form>
+			</div>
+
+			<div class="col-md-7">
+				<h4>Welcome Back to system!</h4><hr>
+				<p class="description">
+					Just to ensure your security please login.
+
+				</p>
+			</div>
+		</div>
+{% endblock content %}

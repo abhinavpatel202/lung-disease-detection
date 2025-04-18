@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Chatting
+{% endblock title %}
+
+{% block content %}
+    <a href="/chat"><button class="btn btn btn-primary"><i class="fa fa-refresh" aria-hidden="true"></i>
+    Rerfresh For Any New Chats</button></a><br><br><br>
+
+    {% for chat in object_list %}
+
+    		{% if chat.user.is_superuser  %}                    
+                {% if  user.get_username == chat.receiver  %}
+            	    <div class="chat" style="width: 90%; background: rgb(127, 140, 80); box-shadow: 2px 0px 25px 20px #330;">    		    
+    		            <small class="chat-user-special"> {{ chat.user }}  -> {{ chat.receiver }}      </small>
+    		            <p><b class="chat-content">{{ chat|linebreaks }} </b></p>
+    		            <small class="chat-date">{{ chat.posted_at }}</small>
+            	    </div><br><br>    
+                {% endif %}
+    		
+    		{% else %}
+                {% if  user  ==  chat.user  and chat.receiver == 'admin' %}
+                	<div class="chat" style="width: 90%; background: rgb(50, 40, 127); box-shadow: 2px 0px 25px 20px #000;text-align: right;">
+    			    <small class="chat-user"> {{ chat.user }}  -> {{ chat.receiver }}  </small>    		    
+    		        <p><b class="chat-content">{{ chat|linebreaks }}</b></p>
+    		        <small class="chat-date">{{ chat.posted_at }}</small>
+            		</div><br><br>    
+                {% endif %}
+    		{% endif %}
+
+            {% if user.get_username == 'admin'%}
+                        {% if  chat.user.get_username == 'admin'  %}
+            	            <div class="chat" style="width: 90%; background: rgb(50, 40, 127); box-shadow: 2px 0px 25px 20px #330;text-align: right;">    		    
+    		                    <small class="chat-user-special"> {{ chat.user }}  -> {{ chat.receiver }}      </small>
+    		                    <p><b class="chat-content">{{ chat|linebreaks }} </b></p>
+    		                    <small class="chat-date">{{ chat.posted_at }}</small>
+            	            </div><br><br>    
+                        {% endif %}
+    		
+                        {% if  chat.receiver == 'admin' %}
+                	        <div class="chat" style="width: 90%; background: rgb(127, 140, 80); box-shadow: 2px 0px 25px 20px #000;">
+    			            <small class="chat-user"> {{ chat.user }}  -> {{ chat.receiver }}  </small>    		    
+    		                <p><b class="chat-content">{{ chat|linebreaks }}</b></p>
+    		                <small class="chat-date">{{ chat.posted_at }}</small>
+            		        </div><br><br>    
+                        {% endif %}
+            {% endif %}
+    		
+
+    {% empty %}
+    <h1 class="heading">No Chats Yet Be The First To Message!</h1><br>
+
+    {% endfor %}
+    <br><a href="{% url 'chat:new' %}"><button class="btn btn-outline-primary">New Message</button></a>
+{% endblock content %}

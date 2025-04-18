@@ -1,0 +1,181 @@
+{% extends "base.html" %}
+
+{% block title %}
+	Classification of Pneumonia
+{% endblock title %}
+
+{% block content %}
+{% load static %}
+
+<br>
+
+<br>
+
+<div class="row justify-content-center mt-15">
+    <div class="col-md-20 text-center" text-align= "justify">
+
+            <h1>
+                Detection and Classification of Pneumonia using Neural Network
+            </h1>
+    </div>
+</div>
+
+<br>
+<br>
+
+
+
+<div class="row justify-content-center mt-15">
+    <div class="col-md-20 text-justify" text-align= "justify">
+        Pneumonia is a form of acute respiratory infection that affects the lungs. The lungs are made up of small sacs called alveoli, which fill with air when a healthy person breathes. When an individual has pneumonia, the alveoli are filled with pus and fluid, which makes breathing painful and limits oxygen intake.
+        Pneumonia is the single largest infectious cause of death in children worldwide. Pneumonia killed 808 694 children under the age of 5 in 2017, accounting for 15% of all deaths of children under five years old. Pneumonia affects children and families everywhere, but is most prevalent in South Asia and sub-Saharan Africa. Children can be protected from pneumonia, it can be prevented with simple interventions, and treated with low-cost, low-tech medication and care.    
+    </div>
+</div>
+
+
+
+<br><br><br>
+<h4>
+        Transmission
+</h4>
+<div class="row justify-content-center mt-15">
+    <div class="col-md-20 text-justify" text-align= "justify">
+        Pneumonia can be spread in a number of ways. The viruses and bacteria that are commonly found in a child's nose or throat, can infect the lungs if they are inhaled. They may also spread via air-borne droplets from a cough or sneeze. In addition, pneumonia may spread through blood, especially during and shortly after birth. More research needs to be done on the different pathogens causing pneumonia and the ways they are transmitted, as this is of critical importance for treatment and prevention.
+    </div>
+</div>
+
+<!--  -->
+
+<br><br><br>
+<h4>
+    Presenting features
+</h4>
+<div class="row justify-content-center mt-15">
+    <div class="col-md-20 text-justify" text-align= "justify">
+        The presenting features of viral and bacterial pneumonia are similar. However, the symptoms of viral pneumonia may be more numerous than the symptoms of bacterial pneumonia. In children under 5 years of age, who have cough and/or difficult breathing, with or without fever, pneumonia is diagnosed by the presence of either fast breathing or lower chest wall indrawing where their chest moves in or retracts during inhalation (in a healthy person, the chest expands during inhalation). Wheezing is more common in viral infections.
+        Very severely ill infants may be unable to feed or drink and may also experience unconsciousness, hypothermia and convulsions.
+    </div>
+</div>
+
+
+<!--  -->
+
+<br><br><br>
+<h4>
+    Prevention
+</h4>
+<div class="row justify-content-center mt-15">
+    <div class="col-md-20 text-justify" text-align= "justify">
+        Preventing pneumonia in children is an essential component of a strategy to reduce child mortality. Immunization against Hib, pneumococcus, measles and whooping cough (pertussis) is the most effective way to prevent pneumonia.
+        Adequate nutrition is key to improving children's natural defences, starting with exclusive breastfeeding for the first 6 months of life. In addition to being effective in preventing pneumonia, it also helps to reduce the length of the illness if a child does become ill.
+        Addressing environmental factors such as indoor air pollution (by providing affordable clean indoor stoves, for example) and encouraging good hygiene in crowded homes also reduces the number of children who fall ill with pneumonia.
+        In children infected with HIV, the antibiotic cotrimoxazole is given daily to decrease the risk of contracting pneumonia.        
+    </div>
+</div>
+
+
+<br><br><br>
+<h4>
+    System Architecture
+</h4>
+
+    <div class="row justify-content-center mt-15">
+        <div class="col-md-20 text-center" text-align= "justify">
+                <br><br>
+                <img src="/static/img/architecture.png" class="img-responsive" style="width: 75%; float: center; " />                
+                <br><br><br>         
+        </div>
+    </div>
+
+        <br>
+        <br>
+
+
+
+        <!DOCTYPE html>
+        <html>
+        <head>
+        <style>
+        #customers {
+          font-family: Arial, Helvetica, sans-serif;
+          border-collapse: collapse;
+          width: 100%;
+        }
+        
+        #customers td, #customers th {
+          border: 1px solid #ddd;
+          padding: 8px;
+          text-align: center;
+        }
+        
+        #customers tr:nth-child(even){background-color: #f2f2f2;}
+        
+        #customers tr:hover {background-color: #3e54b3c9;text-align: center;}
+        
+        #customers th {
+          padding-top: 12px;
+          padding-bottom: 12px;
+          text-align: center;
+          background-color: #3e53b3e0;
+          color: white;
+        }
+        </style>
+        </head>
+        <body>
+
+        <h4>
+            comparative study of proposed algorithm with existing algorithm on the basis of performance parameters
+        </h4>
+            
+        <!-- <h1>Performance Parameters</h1> -->
+        
+        <table id="customers">
+          
+          <tr>
+            <th></th>
+            <th>Proposed Method</th>
+            <th>SVM</th>
+            <th>DNN</th>
+          </tr>
+        
+          <tr>
+            <td> Accuracy </td>
+            <td> 99.44 %</td>
+            <td> 72.49 %</td>
+            <td> 74.26 %</td>
+          </tr>
+        
+          <tr>
+            <td> Precision </td>
+            <td> 99.33 % </td>
+            <td> 66.18 %</td>
+            <td> 69.21 %</td>
+          </tr>
+        
+          <tr>
+            <td> Recall </td>
+            <td> 99.00 % </td>
+            <td> 65.12 %</td>
+            <td> 57.15 %</td>
+          </tr>
+        
+          <tr>
+            <td> F1 score </td>
+            <td> 99.67 % </td>
+            <td> 65.12 %</td>
+            <td> 57.15 %</td>
+          </tr>
+        
+        
+        </table>
+        
+        </body>
+        </html>
+        <br>
+        <br>
+                
+
+
+{% endblock %}
+
+
